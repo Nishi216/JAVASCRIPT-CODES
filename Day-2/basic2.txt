@@ -1,0 +1,24 @@
+--- Variables are basically containers for values (such as numbers, or strings of text). 
+--- Variable is created with the keyword let (or var) followed by a name for your variable.
+--- Constants are used to store values that are immutable or can't be changed and are created with the keyword const.
+--- Operators in JS -
+    --- Arithmatic Operators -
+        -- Addition (+) - numerical addition and string concatenation
+        -- Subtration(-)
+        -- Multiplication (*)
+        -- Division (/)
+    --- Comparison Operators - 
+        -- === Strict equality checking
+        -- == Equality checking
+        -- !== Strict non equality checking
+        -- != Non equality checking
+        -- > Greater than
+        -- < Less than
+
+
+--- Events in JS - Events are things that happen in the browser — a button being clicked, a page loading, a video playing, etc. 
+    — in response to which we can run blocks of code. The constructs that listen out for the event happening are called event listeners, 
+    and the blocks of code that run in response to the event firing are called event handlers.
+
+--- the focus() method to automatically put the text cursor into the <input> text field as soon as the page loads, meaning that the user 
+    can start typing their first guess right away, without having to click the form field first.
