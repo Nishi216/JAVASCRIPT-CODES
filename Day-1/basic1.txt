@@ -1,0 +1,56 @@
+--- APIs are ready-made sets of code building blocks that allow a developer to implement programs that would 
+otherwise be hard or impossible to implement. They do the same thing for programming that ready-made furniture 
+kits do for home building — it is much easier to take ready-cut panels and screw them together to make a 
+bookshelf than it is to work out the design yourself.
+
+
+--- APIs generally fall into two categories -
+        -- Browser APIs are built into your web browser, and are able to expose data from the surrounding 
+           computer environment, or do useful complex things. For ex, DOM(document object model) API, Geolocation API
+        -- Third party APIs are not built into the browser by default, and you generally have to grab their 
+           code and information from somewhere on the Web. For ex, Twitter API, GoogleMaps API
+
+
+--- When the browser encounters a block of JavaScript, it generally runs it in order, from top to bottom.
+--- JavaScript is a lightweight interpreted programming language. The web browser receives the JavaScript code 
+    in its original text form and runs the script from that. From a technical standpoint, most modern JavaScript 
+    interpreters actually use a technique called just-in-time compiling to improve performance; the JavaScript 
+    source code gets compiled into a faster, binary format while the script is being used, so that it can be run 
+    as quickly as possible. However, JavaScript is still considered an interpreted language, since the compilation 
+    is handled at run time, rather than ahead of time.
+
+
+--- JavaScript code can be added in two ways in HTML document -
+    -- Internal JavaScript - It is when the JS code is written within the HTML file inside the <script> tag.
+                           - If the JS code is written inside the head tag, then an event listener has to be added,
+                             like,
+                                    document.addEventListener("DOMContentLoaded", function() {
+                                        ...
+                                    });
+                           - If the JS code is written inside the body and at the end of the body within the 
+                             script tag ofcourse, then DOMContentLoaded event is not needed to be added. 
+                           - This is an event listener, which listens for the browser's "DOMContentLoaded" event, 
+                             which signifies that the HTML body is completely loaded and parsed. The JavaScript 
+                             inside this block will not run until after that event is fired.                  
+    -- External JavaScript - It is when JS code is written in a separate file being saved with the extention .js.
+                           - The External JS file is provided inside the script tag.
+                           - If the script tag is provided just before the closing of the <head> tag then defer
+                             attribute has to be used inside the script tag. Like <script src='file.js' defer>
+                           - the defer attribute tells the browser to continue downloading the HTML content once 
+                             the <script> tag element has been reached.
+                           - If the script tag is provided just before the closing of the <body> tag then defer
+                             attribute is not needed.
+
+
+--- There are two modern features we can use to bypass the problem of the blocking script — async and defer
+        -- async and defer both instruct the browser to download the script(s) in a separate thread, while the 
+           rest of the page (the DOM, etc.) is downloading, so the page loading is not blocked during the fetch 
+           process.
+        -- scripts with an async attribute will execute as soon the download is done. This blocks the page and 
+           does not guarantee any specific execution order.
+        -- scripts with a defer attribute will load in the order they are in and will only execute once everything 
+           has finished loading.
+        -- If your scripts should be run immediately and they don't have any dependencies, then use async.
+        -- If your scripts need to wait for parsing and depend on other scripts and/or the DOM being in place, 
+           load them using defer and put their corresponding <script> elements in the order you want the browser 
+           to execute them.
