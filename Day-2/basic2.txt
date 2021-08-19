@@ -10,8 +10,8 @@
         -- Modulo (%)
         -- Exponentiation (**)
     --- Comparison Operators - 
-        -- === Strict equality checking
-        -- == Equality checking
+        -- === Strict equality checking (this checks the equality of the values as well as the data types)
+        -- == Equality checking (this checks the equality of the values only and not the data types)
         -- !== Strict non equality checking
         -- != Non equality checking
         -- > Greater than
