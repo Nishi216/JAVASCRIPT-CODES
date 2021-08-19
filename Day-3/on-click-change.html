@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Clicking on Button </title>
+    </head>
+    <body>
+        <button> START MACHINE </button>
+        <p> THE MACHINE IS NOT RUNNING </p>
+
+        <script>
+            const button = document.querySelector('button');
+            const text = document.querySelector('p');
+
+            document.addEventListener('click',changetext);
+
+            function changetext(){
+                if (button.textContent==="START MACHINE"){
+                    button.textContent = "STOP MACHINE";
+                    text.textContent = "MACHINE HAS STARTED RUNNING";
+                }
+                else{
+                    button.textContent = "START MACHINE";
+                    text.textContent = "THE MACHINE IS NOT RUNNING";
+                }
+            }
+        </script>
+    </body>
+</html>

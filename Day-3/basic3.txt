@@ -1,0 +1,10 @@
+--- JavaScript only has one data type for numbers, both integers and decimals — Number.
+    This means that whatever type of numbers you are dealing with in JavaScript, you handle them in exactly the same way.
+
+--- typeof operator in JS is used to check the data type of the value stored in the variable.
+
+--- The Number object, an instance of which represents all standard numbers you'll use in your JavaScript, 
+    has a number of useful methods available on it for you to manipulate numbers.
+            -- To round number to a fixed number of decimal places, toFixed() method is used.
+            -- To convert a string into a number, Number() constructor is used. This is generally needed for working on
+               with the forms where the input data is in the string format.
