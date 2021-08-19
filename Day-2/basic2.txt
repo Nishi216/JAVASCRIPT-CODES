@@ -16,6 +16,8 @@
         -- != Non equality checking
         -- > Greater than
         -- < Less than
+    --- Increament operator (++)
+    --- Decreament operator (--)
 
 
 --- Events in JS - Events are things that happen in the browser — a button being clicked, a page loading, a video playing, etc. 
