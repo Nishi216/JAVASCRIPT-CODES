@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> FIXING CAPITALIZATION </title>
+</head>
+<body>
+    <p>
+        <ul> </ul>
+    </p>
+    <script>
+        const list = document.querySelector('ul');
+        list.innerHTML = '';
+        let cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+
+        for (let i = 0; i < cities.length; i++) {
+        let input = cities[i];
+        let lowercase = input.toLowerCase();
+        let firstletter = lowercase.slice(0,1);
+        let capital = lowercase.replace(firstletter, firstletter.toUpperCase());
+        let result = capital;
+        let listItem = document.createElement('li');
+        listItem.textContent = result;
+        list.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>

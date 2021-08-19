@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> FILTERING MESSAGE </title>
+</head>
+<body>
+    <p>
+        <ul> </ul>
+    </p>
+
+    <script>
+        const list= document.querySelector('ul');
+        list.innerHTML='';
+        let greetings = ['Happy Birthday!',
+                        'Merry Christmas my love',
+                        'A happy Christmas to all the family',
+                        'You\'re all I want for Christmas',
+                        'Get well soon'];
+        for(let i=0;i<greetings.length;i++){
+            let input = greetings[i];
+            if (greetings[i].indexOf('Christmas') !== -1){
+                let listitem = document.createElement('li');
+                listitem.textContent= input;
+                list.appendChild(listitem);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+--- Some of the important and useful string methods
+
+--- Finding the length of string - string.length
+--- To get the first letter of the string, indexing is used - string[0]
+    To get the last letter of the string, indexing is used in - string[string.length-1]
+
+--- To get the index of the substring present in the string - .indexOf() method is used
+    -- string.indexOf(substring), if the substring is not present then -1 is returned.
+
+--- To get a substring out of the string - .slice() method is used
+    -- string.slice(0,4), then letters at index 0,1,2,3 will be returned.
+    -- string.slice(4), then letters starts from index 4 and returns till the end of string.
+
+--- To change the cases of string -
+    -- string.toLowerCase()
+    -- string.toUpperCase()
+
+--- To replace the string with another string - .replace() method is used
+    -- string.replace(substring1, substring2)
+
+    

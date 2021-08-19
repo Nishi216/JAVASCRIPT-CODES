@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting a Prompt</title>
+</head>
+<body>
+    <button> Press ME! </button>
+   <!--
+    --- Here we're using a window.prompt() function, which asks the user to answer a question 
+        via a popup dialog box then stores the text they enter inside a given variable — name. 
+    --- We then use a window.alert() function to display another popup containing a string 
+        we've assembled from two string literals and the name variable, via concatenation.
+```-->
+    <script>
+        const button = document.querySelector('button');
+        button.onclick = function()
+        {
+            let name = prompt('Enter your name:  ');
+            alert('Hello ' + name + ' welcome to JS learning!');
+        }
+    </script>
+</body>
+
+</html>
+

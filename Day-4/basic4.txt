@@ -1,0 +1,24 @@
+--- Strings are declared and initialized in the same way as in number variables.
+--- Strings are enclosed within single quotes or double quotes. Escape sequences can also be used just like in Python.
+--- When you enter an actual string in your code, enclosed in single or double quotes, it is called a string literal.
+
+--- Concatenate is a fancy programming word that means "join together". Joining together strings in JavaScript uses the plus (+) operator.
+
+--- Every number has a method called toString() that converts it to the equivalent string. ex - mynum.toString()
+
+--- Template literals (sometimes referred to as template strings), is a newer syntax that provides more flexible, easier to read strings.
+    To turn a standard string literal into a template literal, you have to replace the quote marks (' ', or " ") with backtick characters (` `).
+
+--- When using Template literals -
+    There is no more need to open and close multiple string pieces — the whole lot can just be wrapped in a single pair of backticks.
+    When you want to include a variable or expression inside the string, you include it inside a ${ } construct, which is called a placeholder.
+
+--- A good example of Template literal is -
+    let examScore = 45;
+    let examHighestScore = 70;
+    examReport = `You scored ${ examScore }/${ examHighestScore } (${ Math.round(examScore/examHighestScore*100) }%). ${ examScore >= 49 ? 'Well done, you passed!' : 'Bad luck, you didn\'t pass this time.' }`;
+
+--- Template literals respect the line breaks in the source code, so newline characters are no longer needed.
+    Ex - output = `I like the song "${ song }".
+                   I gave it a score of ${ score/highestScore * 100 }%.`;
+    This will get printed in the exact same way.
