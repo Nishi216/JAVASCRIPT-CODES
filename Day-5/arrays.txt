@@ -1,0 +1,29 @@
+--- Arrays are generally described as "list-like objects"; they are basically single objects that contain multiple 
+    values stored in a list.
+
+--- In an array, we can store various data types — strings, numbers, objects, and even other arrays. 
+--- We can also mix data types in a single array — we do not have to limit ourselves to storing only numbers 
+    in one array, and in another only strings. For ex, let random = ['tree', 795, [0, 1, 2]];
+--- An array inside an array is called a multidimensional array. You can access an item inside an array that is 
+    itself inside another array by chaining two sets of square brackets together. For ex, random[2][2];
+
+--- Value modification or reassignment in the array is applicable.
+--- To find the length of an array, that is the number of elements in the array - array.length is used.
+
+--- Conversion between the strings and arrays.
+    -- To convert a string into an array - .split() method is used along with the separator.
+        Syntax - string.split(separator)
+    -- To convert an array into a string - .join() method is used.
+        Syntax -  string.join(separator)
+    -- To convert an array to a string, there is another method - toString() method.
+       This method is not taking any argument and will always create a comma-separated string from the array.
+
+--- Adding and deleting element in an array -
+    -- Operation at the end of an array -
+        -- To add an element at the end of an array - array.push(ele1,ele2,..)
+        -- To get an element from the end of an array - array.pop()
+    -- Operation at the beginning of an array -
+        -- To add an element at the front of an array - array.unshift(ele1,ele2,..)
+        -- To remove an element from the front of an array - array.shift()
+
+--- 
