@@ -1,0 +1,31 @@
+--- random(x), returns a whole number between 0 and x-1.
+
+--- Standard for loop -
+    -- for (initializer; condition; final-expression) {
+    // code to run
+    }
+    -- If you want to exit a loop before all the iterations have been completed, 
+       you can use the break statement. a break statement will immediately exit 
+       the loop and make the browser move on to any code that follows it.
+
+
+--- The continue statement works in a similar manner to break, but instead of breaking 
+    out of the loop entirely, it skips to the next iteration of the loop.
+
+
+--- While loop syntax -
+    -- initializer
+        while (condition) {
+        // code to run
+
+        final-expression
+        }
+
+--- Do...While loop syntax -
+    -- initializer
+    do {
+    // code to run
+
+    final-expression
+    } 
+
