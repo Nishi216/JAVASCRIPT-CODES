@@ -1,0 +1,36 @@
+--- if else condition construct is -
+        if(condition){
+            if block;
+        }
+        else if(condition){
+            else if block;
+        }
+        else{
+            else block;
+        }
+
+--- Any value that is not false, undefined, null, 0, NaN, or an empty string ('') 
+    actually returns true when tested as a conditional statement, therefore you can 
+    use a variable name on its own to test whether it is true, or even that it exists 
+    (that is, it is not undefined.) 
+
+--- To avoid nested if else conditions, logical AND (&&) and
+    logical OR (||) is used.
+    The last type of logical operator, NOT, expressed by the ! operator, can be used 
+    to negate an expression.
+
+--- Switch case construct is -
+    switch(expression){
+        case choice1:
+            body
+            break;
+        case choice2:
+            body
+            break;
+        .....
+        .....
+        default:
+            body
+    }
+
+--- Ternary operator - Syntax - ( condition ) ? run this code : run this code instead
