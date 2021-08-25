@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Function Start </title>
+    <style>
+        .msgBox{
+            position: absolute;
+            top:  50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 242px;
+            background: #eee;
+        }
+        .msgBox p{
+            line-height: 1.5;
+            padding: 10px 20px;
+            color: #333;
+            padding-left: 82px;
+            background-position: 25px center;
+            background-repeat: no-repeat;
+        }
+        .msgBox button{
+            background: none;
+            border: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 1.1rem;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <button id='one'> Display message box - 1 </button>
+    <button id='two'> Display message box - 2 </button>
+    <script>
+        function displayMessage(msgText, msgType){
+            const html = document.querySelector('html');
+
+            const panel = document.createElement('div');
+            panel.setAttribute('class', 'msgBox');
+            html.appendChild(panel);
+
+            const msg = document.createElement('p');
+            msg.textContent = msgText;
+            panel.appendChild(msg);
+
+            const closeBtn = document.createElement('button');
+            closeBtn.textContent = 'x';
+            panel.appendChild(closeBtn);
+
+            closeBtn.onclick = function() {
+            panel.parentNode.removeChild(panel);
+            }
+
+            if(msgType==='warning'){
+                msg.style.backgroundImage = 'url(icons/warning.png)';
+                panel.style.backgroundColor = 'red';
+                msg.style.color = 'white';
+            }
+            else if (msgType==='chat'){
+                msg.style.backgroundImage='url(icons/chat.png)';
+                panel.style.backgroundColor='green';
+                msg.style.color='yellow';
+            }
+            else{
+                msg.style.paddingLeft = '20px';
+            }
+        }
+
+        const btn1 = document.getElementById('one');
+        btn1.onclick = function(){
+            displayMessage('Your inbox is almost full — delete some mails', 'warning');
+        };
+        const btn2 = document.getElementById('two');
+        btn2.onclick = function(){
+            displayMessage('Brian: Hi there, how are you today?','chat');
+        };
+        
+    </script>
+</body>
+</html>

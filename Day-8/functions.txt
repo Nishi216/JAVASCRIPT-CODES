@@ -1,0 +1,37 @@
+--- Syntax of functions are  -
+        function name(){
+            //body
+        }
+
+--- Annonymous functions are unnamed functions and syntax is:
+        function(){
+            //body
+        }
+    Annonymous functions are generally used with event handlers, like
+        button.onclick = function(){
+            //body
+        }
+    Value of Annonymous functions can also be stored in variables, like
+        const myfunc = function(){
+
+        }
+        In this case, it is also called function expression.
+
+
+--- When you create a function, the variables and other things defined inside 
+    the function are inside their own separate scope, meaning that they are locked 
+    away in their own separate compartments, unreachable from code outside the functions.
+
+
+--- The top level outside all your functions is called the global scope. Values defined in 
+    the global scope are accessible from everywhere in the code.
+
+--- The parentheses in this context are sometimes called the "function invocation operator". 
+    You only use them when you want to run the function immediately in the current scope.
+    Otherwise do not use the parentheses for calling function.
+
+--- If we want to specify parameters inside parentheses for the function we are calling, 
+    then we can't call it directly — we need to put it inside an anonymous function so that 
+    it isn't in the immediate scope and therefore isn't called immediately. 
+
+--- 
