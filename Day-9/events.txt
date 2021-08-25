@@ -1,0 +1,61 @@
+--- Events are actions or occurrences that happen in the system you are programming,
+    which the system tells you about so you can respond to them in some way if desired. 
+
+--- Each available event has an event handler, which is a block of code (usually a 
+    JavaScript function that you as a programmer create) that runs when the event fires. 
+    When such a block of code is defined to run in response to an event, we say we are 
+    registering an event handler. 
+    Event listener listens out for the event happening, and the handler is the code that 
+    is run in response to it happening.
+
+--- Some event handlers that goes well with buttons :
+    -- btn.onfocus and btn.onblur — The color changes when the button is focused and unfocused; try pressing the tab to focus on 
+       the button and press the tab again to focus away from the button. These are often used to display information about filling
+       in form fields when they are focused, or displaying an error message if a form field is filled with an incorrect value.
+    -- btn.ondblclick — The color changes only when the button is double-clicked.
+    -- window.onkeydown, window.onkeyup — The color changes when a key is pressed on the keyboard. The keydown and keyup refer to 
+       just the key down and key up parts of the keystroke, respectively. Note: It doesn't work if you try to register this event 
+       handler on the button itself — we've had to register it on the window object, which represents the entire browser window.
+    -- btn.onmouseover and btn.onmouseout — The color changes when the mouse pointer hovers over the button, or when the pointer moves 
+       off the button, respectively.
+
+--- Adding and removing event handlers -
+    -- The modern mechanism for adding event handlers is the addEventListener() method. 
+    -- Inside the addEventListener() function, we specify two parameters: the name of the event we want to register 
+       this handler for, and the code that comprises the handler function we want to run in response to it.
+    -- There is a counterpart function, removeEventListener(), which removes a previously added event handler. For example,
+            button.removeEventListener('click',fucntion-name);
+
+    -- The second advantage that addEventListener() has is that it allows you to register multiple handlers for the same listener. Ex,
+            myElement.addEventListener('click', functionA);
+            myElement.addEventListener('click', functionB);
+
+--- Event objects -
+    -- Sometimes inside an event handler function, you'll see a parameter specified with a name such as event, evt, or e. 
+       This is called the event object, and it is automatically passed to event handlers to provide extra features and information. 
+    -- e.target is incredibly useful when you want to set the same event handler on multiple elements and do something to all of them when an event occurs on them.
+
+--- Event bubbling and capture are two mechanisms that describe what happens when two handlers of the same event type are activated on one element. 
+
+--- When an event is fired on an element that has parent elements, modern browsers run three different phases — the capturing phase, the target phase, and the bubbling phase.
+    -- In the capturing phase:
+            The browser checks to see if the element's outer-most ancestor (<html>) has an onclick event handler registered on it for the capturing phase, and runs it if so.
+            Then it moves on to the next element inside <html> and does the same thing, then the next one, and so on until it reaches the direct parent of the element that was actually selected.
+    -- In the target phase:
+            The browser checks to see if the target property has an event handler for the click event registered on it, and runs it if so.
+            Then, if bubbles is true, it propagates the event to the direct parent of the selected element, then the next one, and so on until it reaches the <html> element. Otherwise, if bubbles is false, it doesn’t propagate the event to any ancestors of the target.
+    -- In the bubbling phase, the exact opposite of the capturing phase occurs:
+            The browser checks to see if the direct parent of the element selected has an onclick event handler registered on it for the bubbling phase, and runs it if so.
+            Then it moves on to the next immediate ancestor element and does the same thing, then the next one, and so on until it reaches the <html> element.
+        
+    In modern browsers, by default, all event handlers are registered for the bubbling phase. 
+
+--- The standard Event object has a function available on it called stopPropagation() which, when invoked on a handler's event object, makes it so that first handler is run but the event doesn't bubble any further up the chain, so no more handlers will be run.
+
+--- As mentioned above, by default all event handlers are registered in the bubbling phase, and this makes more sense most of the time. If you really want to register an event in the capturing phase instead, you can do so by registering your handler using addEventListener(), and setting the optional third property to true.
+
+
+--- event delegation — this concept relies on the fact that if you want some code to run when you select any one of a large number of child elements, you can set the event listener on their parent and have events that happen on them bubble up to their parent rather than having to set the event listener on every child individually. 
+
+
+
