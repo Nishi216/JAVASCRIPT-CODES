@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Object oriented JS </title>
+</head>
+<body>
+    <p> object oriented JS programming </p>
+    <script>
+      /*  #declaring object literal to create object
+        function createperson(name){
+            const obj={};
+            obj.name = name;
+            obj.greeting = function(){
+                alert('hi! i am '+obj.name);
+            };
+            return obj;
+        } 
+        const salva = createperson('salva');
+        salva.name;
+        salva.greeting();
+        */
+
+        /*function Createperson(name){
+            this.name = name;
+            this.greeting = function(){
+                alert('hi! i am '+this.name);
+            };
+        }
+        let person1 = new Createperson('Bob');
+        let person2 = new Createperson('Alice');
+        */
+
+        //using constructor function to create object 
+        function Person(first,last,age,gender,interests){
+            this.name = {
+                first:first,
+                last:last
+            };
+            this.age = age;
+            this.gender = gender;
+            this.interests = interests;
+            this.bio = function(){
+                alert(this.name.first+' '+this.name.last+' is of age '+this.age+' having interest and gender '+this.interests+' '+this.gender);
+            
+            };
+            this.greeting = function(){
+                alert('hi welcome '+this.name.first);
+            };
+        }
+        let person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
+        console.log(person1['age']);
+        console.log(person1.interests[1]);
+        person1.bio();
+
+        let person2 = Object.create(person1);
+        person2.greeting();
+    </script>
+</body>
+</html>

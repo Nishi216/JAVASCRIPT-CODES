@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Using the concept of class </title>
+</head>
+<body>
+    <p> Using the concept of class </p>
+</body>
+<script>
+    class Person{
+        constructor(first,last,age,gender,interests){
+            this.name = {
+                first,
+                last
+            };
+            this.age = age;
+            this.gender = gender;
+            this.interests = interests;
+        }
+        greeting(){
+            console.log(`Hi i am ${this.name.first}`);
+        };
+        farewell(){
+            console.log(`${this.name.first} ${this.name.last} has left the page `);
+        };
+    }
+
+    let han = new Person('Han', 'Solo', 25, 'male', ['Smuggling']);
+    let lily = new Person('Lily', 'Organa', 19, 'female', ['Government']);
+
+    class Teacher extends Person{
+        constructor(first,last,age,gender,interests,subject,grade){
+            super(first,last,age,gender,interests);
+            this._subject = subject;
+            this.grade = grade;
+        }
+        get subject(){
+            return this._subject;
+        }
+        set subject(newsub){
+            this._subject=newsub;
+        }
+    }
+
+    let snape = new Teacher('Severus', 'Snape', 58, 'male', ['Potions'], 'Dark arts', 5);
+    console.log(snape.subject);
+    snape.subject = 'computer';
+    console.log(snape.subject);
+</script>
+</html>

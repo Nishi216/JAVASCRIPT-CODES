@@ -1,0 +1,57 @@
+--- From our class, we can create object instances — objects that contain the data and functionality defined in the class.
+
+--- When an object instance is created from a class, the class's constructor function is run to create it. 
+    This process of creating an object instance from a class is called instantiation — the object instance is instantiated from the class.
+
+--- The fancy word for the ability of multiple object types to implement the same functionality is polymorphism.
+
+--- JavaScript uses special functions called constructor functions to define and initialize objects and their features. 
+    They are useful because you'll often come across situations in which you don't know how many objects you will be creating; 
+    constructors provide the means to create as many objects as you need in an effective way, attaching data and functions to them as required.
+
+--- Objects are created in several ways -
+    -- two of the common ways are - 
+        -- declaring object literals
+        -- using constructor function
+    -- using the Object() constructor to create an object -
+        -- let person1 = new Object({
+            name: 'Chris',
+            age: 38,
+            greeting: function() {
+                alert('Hi! I\'m ' + this.name + '.');
+            }
+        });
+    -- using create() method.
+        - JavaScript has a built-in method called create() with which you can create a new object, using an existing object as 
+          the prototype of the newly created object.
+
+--- Prototypes are the mechanism by which JavaScript objects inherit features from one another. 
+
+--- We want to reiterate that the methods and properties are not copied from one object to another in the prototype chain. They are accessed by walking up the chain.
+
+--- Most modern browsers, however, do offer property available called __proto__ (that's 2 underscores either side), which contains the object's constructor's prototype object.
+
+--- To look into the constructor function of any object, write - objectname.constructor
+    To look into the name of the constructor of any object, write objectname.constructor.name
+
+--- performing delete person1.__proto__.farewell or delete Person.prototype.farewell would remove the farewell() method from all Person instances.
+
+--- Cleaner way to code -
+        // Constructor with property definitions
+
+            function Test(a, b, c, d) {
+            // property definitions
+            }
+
+            // First method definition
+
+            Test.prototype.x = function() { ... };
+
+            // Second method definition
+
+            Test.prototype.y = function() { ... };
+
+            // etc.
+
+
+
